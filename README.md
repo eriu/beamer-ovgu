@@ -31,13 +31,13 @@ For english please use the "-en" Version e.g. ```\usepackage{style/beamer_mb-en}
 Style | S | Screenshot
 :---| :---| :---|
 OVGU| \usepackage{style/beamer_ovgu} | <img src=screenshots/ovgu.png width=378 height=284/>
-Maschinenbau|  \usepackage{style/beamer_mb} <br> \usepackage{style/beamer_mb-en}  | <img src=screenshots/mb.png width=378 height=284/>
-Verfahrens- und Systemtechnik|  \usepackage{style/beamer_vst}<br>\usepackage{style/beamer_vst-en}   | <img src=screenshots/vst.png width=378 height=284/>
-Elektrotechnik und Informationstechnik|  \usepackage{style/beamer_eit}<br>\usepackage{style/beamer_eit-en} | <img src=screenshots/eit.png width=378 height=284/>
-Informatik|  \usepackage{style/beamer_inf}<br>\usepackage{style/beamer_inf-en}  | <img src=screenshots/inf.png width=378 height=284/>
-Mathematik|  \usepackage{style/beamer_ma}<br>\usepackage{style/beamer_ma-en}  | <img src=screenshots/ma.png width=378 height=284/>
-Naturwissenschaften|  \usepackage{style/beamer_nat}<br>\usepackage{style/beamer_nat-en}  | <img src=screenshots/nat.png width=378 height=284/>
-Medizin|  \usepackage{style/beamer_med}<br>\usepackage{style/beamer_med-en}  | <img src=screenshots/med.png width=378 height=284/>
-Humanwissenschaften|  \usepackage{style/beamer_hw}<br>\usepackage{style/beamer_hw-en}  | <img src=screenshots/hw.png width=378 height=284/>
-Wirtschaftswissenschaften|  \usepackage{style/beamer_ww}<br>\usepackage{style/beamer_ww-en}  | <img src=screenshots/ww.png width=378 height=284/>
+Maschinenbau <br> mechanical engineering|  \usepackage{style/beamer_mb} <br> \usepackage{style/beamer_mb-en}  | <img src=screenshots/mb.png width=378 height=284/>
+Verfahrens- und Systemtechnik <br> process and system engineering|  \usepackage{style/beamer_vst}<br>\usepackage{style/beamer_vst-en}   | <img src=screenshots/vst.png width=378 height=284/>
+Elektrotechnik und Informationstechnik <br> electrical engineering and information technology|  \usepackage{style/beamer_eit}<br>\usepackage{style/beamer_eit-en} | <img src=screenshots/eit.png width=378 height=284/>
+Informatik <br>computer science|  \usepackage{style/beamer_inf}<br>\usepackage{style/beamer_inf-en}  | <img src=screenshots/inf.png width=378 height=284/>
+Mathematik <br> mathematics|  \usepackage{style/beamer_ma}<br>\usepackage{style/beamer_ma-en}  | <img src=screenshots/ma.png width=378 height=284/>
+Naturwissenschaften <br> natural science|  \usepackage{style/beamer_nat}<br>\usepackage{style/beamer_nat-en}  | <img src=screenshots/nat.png width=378 height=284/>
+Medizin <br> medicine|  \usepackage{style/beamer_med}<br>\usepackage{style/beamer_med-en}  | <img src=screenshots/med.png width=378 height=284/>
+Humanwissenschaften <br> human science|  \usepackage{style/beamer_hw}<br>\usepackage{style/beamer_hw-en}  | <img src=screenshots/hw.png width=378 height=284/>
+Wirtschaftswissenschaften <br> economics and management|  \usepackage{style/beamer_ww}<br>\usepackage{style/beamer_ww-en}  | <img src=screenshots/ww.png width=378 height=284/>
 Elektromagnetische Verträglichkeit |  \usepackage{beamer_emv}  | <img src=screenshots/emv.png width=378 height=284/>

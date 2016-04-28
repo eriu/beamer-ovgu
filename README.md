@@ -19,6 +19,13 @@ Für die Auswahl des passenden Designs muss die gewünschte Zeile in der Daatei 
 * Lehrstuhl für Elektromagnetische Verträglichkeit (EMV)
 
 For english please use the "-en" Version e.g. ```\usepackage{style/beamer_mb-en}```
+
+###weitere Optionen
+**Seitenverhältnis / Aspect ratio**
+
+* ```\documentclass[aspectratio=43]{beamer}```  4:3 Format
+* ```\documentclass[aspectratio=169]{beamer}```  16:9 Format
+
 	
 ###Screenshoots
 Style | S | Screenshot

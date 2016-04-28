@@ -1,0 +1,66 @@
+% allgemeine Einstellungen
+\usepackage{beamerthemedefault}
+\usefonttheme{professionalfonts}
+\usecolortheme{dove}
+
+% Definition der FEIT-Farbe
+\definecolor{ovgu-fmb-blue}{RGB}{0 158 227}
+\newcommand{\pagefont}{ \fontsize{4}{6}\selectfont}
+
+% Definieren der Kopfzeile
+\setbeamertemplate{headline}{%
+\begin{minipage}{0.6\textwidth}%
+	\vspace*{0.1cm}\hspace*{0.2cm}%
+	\includegraphics[width=5.25cm]{Signet_MB_2.eps}%
+\end{minipage}%
+\begin{minipage}{0.4\textwidth}%
+	\vspace*{0.1cm}%
+	\pagefont\hfill%
+	\textbf{\insertshortdate~\insertshorttitle	%
+	~$\vert$~\insertframenumber}\hspace*{0.2cm}\\ \bigskip	\smallskip%
+\end{minipage}%
+\vspace*{0.1cm}
+\newline
+\color{ovgu-fmb-blue}\rule{\paperwidth}{1pt}%
+}
+
+% Definieren der Fußzeile
+%\setbeamertemplate{footline}{
+%\centerline{\textbf{\begin{fusszeile}\end{fusszeile}}}}
+% smaller textsize in nested items
+\beamertemplatedotitem
+%\setbeamerfont{itemize/enumerate subbody}{size= \scriptsize} 
+
+% frametitle linksbündig, schwarz und fett 
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{framesubtitle}{size=\normalsize}
+
+% Folienränder festlegen 
+\setbeamersize{text margin left=0.73cm}
+
+% Table of Contents neu definieren 
+\newcommand{\toccur}{\frame{\frametitle{Table of Contents}\tableofcontents[current]}}
+\newcommand{\toc}{\frame{\frametitle{Table of Contents}\tableofcontents}}
+\setbeamertemplate{sections/subsections in toc}[default] %{\color{black}}
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[square]
+%\setbeamertemplate{itemize item}[default]
+%\setbeamertemplate{itemize items}[triangle]
+%\setbeamertemplate{section in toc}[\textbf]%[sections numbered]
+%\setbeamertemplate{subsection in toc}[subsections numbered]
+
+% Allgemeine Angaben und Verbesserung vom default Theme
+\setbeamercolor{structure}{fg=black}				% Farbe der Aufzählpunkte
+\setbeamercolor{section in toc}{fg=black}			% Farbe des Inhaltsverzeichnisses
+\setbeamercolor{subsection in toc}{parent=section in toc}
+\setbeamercolor{framesubtitle}{fg=black}			% Farbe des framesubtitle
+
+% Navigationssymbole abschalten 
+\setbeamertemplate{navigation symbols}{}
+
+% Transparenz Effekte
+%\setbeamercovered{invisible} 		% is the default 
+\setbeamercovered{transparent} 		% Durchscheinen des Textes
+% \setbeamercovered{dynamic} 		% Einblenden
+% \setbeamercovered{highly dynamic} 	% Einblenden

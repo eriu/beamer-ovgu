@@ -1,0 +1,163 @@
+% Paket für Deutsche Sprache (Übersetzungen von Chapter zu Kapitel, 
+% richtige Umlaute, richtige % Silbentrennung)
+% siehe auch http://de.wikipedia.org/wiki/Babel-System
+\usepackage[ngerman]{babel}
+
+% Eingabecodierung, deutsche Umlaute oder die akzentuierten Zeichen sind verfügbar 
+% und können direkt eingegeben werden
+% siehe auch http://de.wikipedia.org/wiki/UTF8
+\usepackage[utf8]{inputenc}
+
+% Ausgabeschriftart von LaTeX festlegen
+% siehe auch http://de.wikibooks.org/wiki/LaTeX-Schnellkurs:_Erste_Schritte
+\usepackage[T1]{fontenc}
+
+% Standardpfad für Grafiken
+\graphicspath{{logos/}{bilder/}}
+
+% Paket zum Erstellen von Plots mit TikZ
+\usepackage{pgfplots}
+% immer die neueste Version benutzen
+\pgfplotsset{compat=newest}
+% Verbindung von Linien durch eine schräge Kante
+\pgfplotsset{every axis/.append style={line join=bevel}}
+% Formatvorlage für Präsentationen
+\mode<beamer>{
+	\pgfplotsset{
+		beamer/.style={
+			width=0.8\textwidth,
+			height=0.45\textwidth,
+			legend style={font=\scriptsize},
+			tick label style={font=\footnotesize},
+			label style={font=\small},
+			max space between ticks=28,
+		}
+	}
+}
+\mode<handout>{
+	\pgfplotsset{
+		beamer/.style={
+			width=0.8\textwidth,
+			height=0.45\textwidth,
+			legend style={font=\scriptsize},
+			tick label style={font=\footnotesize},
+			label style={font=\small},
+			max space between ticks=25,
+		}
+	}
+}
+\mode<article>{
+	\pgfplotsset{
+		beamer/.style={
+			width=0.8\textwidth,
+			height=0.45\textwidth,
+			max space between ticks=35,
+		}
+	}
+}
+% neue Größenvorlage für zwei Plots nebeneinander anlegen
+\pgfplotsset{
+	scriptsize/.style={
+		width=0.34\textwidth,
+		height=0.1768\textwidth,
+		legend style={font=\scriptsize},
+		tick label style={font=\scriptsize},
+		label style={font=\footnotesize},
+		title style={font=\footnotesize},
+		every axis title shift=0pt,
+		max space between ticks=25,
+		every mark/.append style={mark size=7},
+		major tick length=0.1cm,
+		minor tick length=0.066cm,
+	}
+}
+\pgfplotsset{
+	small/.style={
+		width=6.5cm,
+		height=,
+		tick label style={font=\footnotesize},
+		label style={font=\small},
+		legend style={font=\footnotesize},
+		max space between ticks=30,
+	}
+}
+% Legendeneintrage standardmäßig links ausrichten
+\pgfplotsset{legend cell align=left}
+% Hauptgitternetz zeichnen
+\pgfplotsset{xmajorgrids}
+\pgfplotsset{ymajorgrids}
+% Anzahl der kleinen Teilstriche zwischen zwei großen Teilstrichen
+%\pgfplotsset{minor x tick num={3}}
+%\pgfplotsset{minor y tick num={3}}
+% feines Gitternetz zeichnen
+%\pgfplotsset{xminorgrids}
+%\pgfplotsset{yminorgrids}
+% nur nach den Achsen skalieren
+\pgfplotsset{scale only axis}
+% Farben wie in MATLAB definieren
+\definecolor{matlab1}{rgb}{0,0,1}
+\definecolor{matlab2}{rgb}{0,0.5,0}
+\definecolor{matlab3}{rgb}{1,0,0}
+\definecolor{matlab4}{rgb}{0,0.75,0.75}
+\definecolor{matlab5}{rgb}{0.75,0,0.75}
+\definecolor{matlab6}{rgb}{0.75,0.75,0}
+\definecolor{matlab7}{rgb}{0.25,0.25,0.25}
+% Farbreihenfolge wie in MATLAB definieren
+\pgfplotscreateplotcyclelist{matlab}{
+	{matlab1,solid},
+	{matlab2,dashed},
+	{matlab3,dashdotted},
+	{matlab4,dotted},
+	{matlab5,densely dashed},
+	{matlab6,densely dashdotted},
+	{matlab7,densely dotted}% dies unterdrückt einen Fehler
+}
+% Farbreihenfolge wie in MATLAB benutzen
+\pgfplotsset{cycle list name=matlab}
+% Farbreihenfolge von pgfplots benutzen
+%\pgfplotsset{cycle list name=color list}
+% nur Graustufen benutzen
+%\pgfplotsset{cycle list name=linestyles}
+% Strichstärke auf 1pt festlegen
+\pgfplotsset{every axis plot/.append style={line width=1pt}}
+% für deutsche Dokumente ein Komma benutzen
+\addto\extrasngerman{\pgfplotsset{/pgf/number format/.cd,set decimal separator={{{,}}}}}
+% ein halbes Leerzeichen als Tausendertrennzeichen benutzen
+%\pgfplotsset{/pgf/number format/.cd,1000 sep={\,}}
+% kein Tausendertrennzeichen verwenden
+\pgfplotsset{/pgf/number format/.cd,1000 sep={}}
+% Zahlen kleiner als 0.1 auch im fixed-Format ausgeben
+\pgfplotsset{/pgf/number format/.cd,std=-2}
+% neue Positionen für Legenden anlegen
+\pgfplotsset{/pgfplots/legend pos/north/.style={/pgfplots/legend style={at={(0.50,0.97)},anchor=north}}}
+\pgfplotsset{/pgfplots/legend pos/south/.style={/pgfplots/legend style={at={(0.50,0.03)},anchor=south}}}
+\pgfplotsset{/pgfplots/legend pos/east/.style={/pgfplots/legend style={at={(0.97,0.50)},anchor=east}}}
+\pgfplotsset{/pgfplots/legend pos/west/.style={/pgfplots/legend style={at={(0.03,0.50)},anchor=west}}}
+\pgfplotsset{/pgfplots/legend pos/outer north/.style={/pgfplots/legend style={at={(0.50,1.03)},anchor=south}}}
+
+% Paket für SI-Einheiten
+\usepackage[load-configurations=binary]{siunitx}
+% Trennzeichen für Bereiche
+\addto\extrasngerman{\sisetup{range-phrase={ bis~}}} 
+\addto\extrasenglish{\sisetup{range-phrase={ to~}}}
+
+% Paket, um das Floating in Article-Modus abzuschalten
+\usepackage{float}
+
+% Paket, um anderen Zeilenabstand einzustellen, besonders für Tabellen
+\usepackage{setspace}
+
+% Paket für ein intelligentes Leerzeichen
+\usepackage{xspace}
+
+% Abkürzung für z. B.
+\newcommand{\zB}{z.\,B.\xspace}
+
+% Paket für schönere Brüche im Textmodus
+\usepackage{xfrac}
+% Standardeinstellung mit einem schrägen Bruchstrich
+\UseCollection{xfrac}{plainmath}
+
+% schönere Tabellen
+\usepackage{booktabs}
+

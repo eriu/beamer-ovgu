@@ -1,0 +1,207 @@
+% Beamer-Klasse
+\documentclass{beamer}
+
+% Pakete laden
+\input{pakete}
+
+% Datenquelle der Logos: http://www.cd.ovgu.de/
+
+%===Design der Universität ===
+% Stil der Otto-von-Guericke-Universität
+%\usepackage{beamer_ovgu}
+
+%===Fakultäten Design===
+% Stil der Fakultät für Maschinenbau
+%\usepackage{beamer_mb}
+
+% Stil der Fakultät für Verfahrens- und Systemtechnik
+%\usepackage{beamer_vst}
+
+% Stil der Fakultät für Elektrotechnik und Informationstechnik
+%\usepackage{beamer_eit}
+
+% Stil der Fakultät für Informatik
+%\usepackage{beamer_inf}
+
+% Stil der Fakultät für Mathematik
+%\usepackage{beamer_ma}
+
+% Stil der Fakultät für Naturwissenschaften
+%\usepackage{beamer_nat}
+
+% Stil der Medizinische Fakultät
+%\usepackage{beamer_med}
+
+% Stil der Fakultät für Humanwissenschaften
+%\usepackage{beamer_hw}
+
+% Stil der Fakultät für Mathematik
+%\usepackage{beamer_ww}
+
+%===weitere Designs===
+% Stil des Lehrstuhls für Elektromagnetische Verträglichkeit laden
+\usepackage{beamer_emv}
+
+% Stil des Stimulate e.V. laden
+%\usepackage{beamer_stimulate}
+
+
+\title[Kurztitel]{Titel der Präsentation}
+\author{Max Mustermann}
+\institute[Lehrstuhl XYZ]{
+	Lehrstuhl für XYZ \\
+	Institut für XYZ \\
+	Otto-von-Guericke-Universität, Magdeburg
+}
+\mode<presentation>{\keywords{Schlüsselwörter durch Komma getrennt}}
+\date[01.01.2016]%{Datum der Präsentation, \zB 1. Januar 2016}
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+	% \maketitle funktioniert auch im Article-Modus
+	% \titlepage funktioniert nur bei Präsentationen
+\end{frame}
+
+\begin{frame}[label=inhalt]{Gliederung}
+	\tableofcontents
+\end{frame}
+
+\section{Einleitung}
+
+% nur für die Miniframe-Navigation
+\subsection*{}
+
+\begin{frame}
+	\frametitle<presentation>{Einleitung}
+	\begin{block}{Sinn und Zweck einer Abschlusspräsentation:}
+		\begin{itemize}
+			\item Darstellung der wichtigsten Ergebnisse der Arbeit
+			\item Interesse für die Arbeit/den Bericht zu wecken
+			\item Ziel: lehrreich und unterhaltsam zugleich
+		\end{itemize}
+	\end{block}
+	\begin{block}{Vorteile von \LaTeX\ mit der \textsc{beamer}-Klasse:}
+		\begin{itemize}
+			\item sehr einfach, wenn die Arbeit bereits in \LaTeX\ erstellt wurde
+			\item verschiedene Darstellungsvarianten zur Auswahl
+			\item Handzettel können einfach mit \emph{beamerarticle} erzeugt werden
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\section{Hauptteil}
+
+\subsection{Gleichungen}
+
+\begin{frame}
+	\frametitle<presentation>{Gleichungen}
+	\begin{block}{Satz des Pythagoras:}
+		\begin{equation}
+			a^2 + b^2 = c^2 \label{eq:pythogoras}
+		\end{equation}	\end{block}
+	\begin{block}{Es folgt, dass:}
+		\begin{align}
+			a^2 &= c^2 - b^2 \\
+			b^2 &= c^2 - a^2
+		\end{align} 	
+ 	\end{block}
+\end{frame}
+
+\subsection{Abbildungen}
+
+\begin{frame}
+	\frametitle<presentation>{Abbildungen}
+	\begin{figure}[!t]
+		\centering
+			\includegraphics[height=5cm]{bilder/unilogo}
+		\caption{Altes Logo der Universität}
+		\label{fig:unilogo}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Diagramme}
+	\begin{figure}[!t]
+		\centering
+			\begin{tikzpicture}
+				\begin{axis}[
+					beamer,
+					xlabel={Zeit, $t$ (in \si{\milli\second})},
+					ylabel={Spannung, $u(t)$ (in \si{\volt})},
+					xmin=0,xmax=20,
+					ymin=-350,ymax=350,
+					legend pos=south west,
+					% Beispiel für das Einbinden einer Linie durch Angabe einer Formel
+					]
+					\addplot+[
+						domain=0:20,
+						samples=101,
+					] {sin(deg(x*2*pi/20))*sqrt(2)*230};
+					\addlegendentry{sinusförmig};
+					\addplot+[
+						domain=0:20,
+						samples=101,
+					] {cos(deg(x*2*pi/20))*sqrt(2)*230};
+					\addlegendentry{cosinusförmig};
+				\end{axis}
+			\end{tikzpicture}
+		\caption{Harmonischer Zeitverlauf einer Spannung mit einer Frequenz von \SI{50}{\hertz} und einem Effektivwert von \SI{230}{\volt}}
+		\label{fig:u_t_sinus}
+	\end{figure}
+\end{frame}
+
+\subsection{Tabellen}
+
+\begin{frame}
+	\frametitle<presentation>{Tabellen}
+	\begin{table}
+		\caption{Beispieltabelle}
+		\label{tab:beispiel}
+		\centering
+			\begin{tabular}{cc}
+				\toprule
+				Variable & Bedeutung \\
+				\midrule
+				$t$ & Zeit \\
+				$U$ & Spannung \\
+				\bottomrule
+			\end{tabular}
+	\end{table}
+\end{frame}
+
+\section{Zusammenfassung}
+
+% nur für die Miniframe-Navigation
+\subsection*{}
+
+\begin{frame}
+	\frametitle<presentation>{Zusammenfassung}
+	\begin{block}{Ergebnisse:}
+	  \begin{itemize}
+	  	\item Kurzfassung der wichtigsten Ergebnisse
+	  	\item Aufzeigen nicht gelöster Probleme und offener Fragen
+	  	\item eventuell Ausblick auf weitere geplante Forschungsarbeiten
+		\end{itemize}
+	\end{block}
+	\begin{block}{Fragen der Zuhörer:}
+	 \begin{itemize}
+	 	\item genügend Zeit für Fragen einplanen
+	 	\item optional: zusätzliche Folien für wahrscheinliche Fragen
+	 \end{itemize}
+	\end{block}	
+\end{frame}
+
+% nur für die Miniframe-Navigation
+\section*{}
+
+\begin{frame}<beamer>{}
+	\begin{center}
+		Vielen Dank für Ihre Aufmerksamkeit!
+	\end{center}
+	\begin{center}
+		Gibt es Fragen?
+	\end{center}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Einleitung}{3}{0}{1}
+\beamer@sectionintoc {2}{Hauptteil}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Gleichungen}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Abbildungen}{5}{0}{2}
+\beamer@subsectionintoc {2}{3}{Tabellen}{7}{0}{2}
+\beamer@sectionintoc {3}{Zusammenfassung}{8}{0}{3}

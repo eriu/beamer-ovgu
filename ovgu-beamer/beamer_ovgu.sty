@@ -1,0 +1,104 @@
+% Miniframe-Navigation aktivieren
+\useoutertheme{miniframes}
+
+% andere Schriftart
+\usepackage{times}
+
+% mathematische Formeln mit Serifen setzen 
+\usefonttheme[onlymath]{serif}
+
+% OVGU-Farbe definieren
+\definecolor{ovgu}{rgb}{0.48,0,0.25}
+
+\setbeamercolor{titlelike}{fg=white}
+\setbeamercolor{title page}{bg=ovgu}
+\setbeamertemplate{navigation symbols}{}
+%\setbeamertemplate{section in toc}[ball unnumbered]
+
+%\setbeamercolor{section number projected}{bg=ovgu}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subtitle}{fg=white}
+\setbeamercolor{author}{fg=white}
+\setbeamercolor{institute}{fg=white}
+\setbeamercolor{date}{fg=white}
+\setbeamercolor{frametitle}{fg=black,bg=white}
+\setbeamercolor{itemize item}{fg=ovgu}
+\setbeamercolor{itemize subitem}{fg=ovgu}
+\setbeamercolor{itemize subitem}{fg=ovgu}
+\setbeamercolor{block title}{fg=ovgu}
+\setbeamercolor{block body}{bg=white}
+\setbeamercolor{mini frame}{fg=ovgu}
+\setbeamercolor{section in head/foot}{fg=ovgu}
+\setbeamercolor{section in toc shaded}{fg=ovgu!30}
+\setbeamercolor{section in toc}{fg=ovgu,bg=ovgu}
+\setbeamercolor{subsection in toc shaded}{fg=ovgu!30}
+\setbeamercolor{subsection in toc}{fg=ovgu}
+
+\setbeamerfont{title page}{family=\rmfamily}
+\setbeamerfont{author}{size=\small}
+\setbeamertemplate{title page}
+{%
+	\vskip35pt
+	\centering
+	\usebeamerfont{title}\inserttitle
+	\vspace*{0.5ex}
+	\textcolor{white}{\hrule height 2pt}
+	\bigskip
+	\usebeamerfont{author}\insertauthor\par
+	\vspace*{1ex}
+	\usebeamerfont{institute}\insertinstitute\par
+	\vspace*{1ex}
+	\usebeamerfont{date}\insertdate\par
+	\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+}
+
+\newenvironment{withoutheadline}{%
+	\setbeamercolor{background canvas}{bg=white}
+	\setbeamertemplate{headline}{%
+		\begin{minipage}[c][0.9cm]{\paperwidth}
+			\begin{minipage}{0.2\paperwidth}
+				\centering
+				\includegraphics[width=0.19\paperwidth]{OVGU_SIGN_druck.pdf}
+			\end{minipage}
+		\end{minipage}
+		\color{ovgu}\rule{\paperwidth}{1pt} 
+	}
+	\setbeamertemplate{footline}{%
+		\colorbox{ovgu}{\begin{minipage}[c][0.4cm]{\textwidth}%
+			\hfill
+		\end{minipage}\hspace{-6pt}}
+	}
+}{}
+
+\setbeamertemplate{headline}
+{\begin{minipage}[c][0.9cm]{\paperwidth}
+		\begin{minipage}{0.2\paperwidth}
+			\centering
+			\includegraphics[width=0.19\paperwidth]{OVGU_SIGN_druck}
+		\end{minipage}
+		\begin{minipage}{0.8\paperwidth}
+		%Fügt die Standard-Navi ein (miniframes)
+			\insertnavigation{0.75\paperwidth}
+			\vskip4pt
+		\end{minipage}
+	\end{minipage}
+	\color{ovgu}\rule{\paperwidth}{1pt} 
+}
+
+\setbeamertemplate{footline}{%
+\colorbox{ovgu}{\begin{minipage}[c][0.4cm]{\textwidth}%	
+	\hspace*{0.5cm}\color{white}{\inserttitle}
+	\hfill\tiny\insertframenumber\hspace*{0.5cm}
+\end{minipage}\hspace{-6pt}}
+}
+
+\AtBeginSection[]
+{
+	\begin{withoutheadline}
+		\begin{frame}
+			\begin{center}
+				\usebeamercolor[fg]{block title}\LARGE{\insertsection}
+			\end{center}
+		\end{frame}
+	\end{withoutheadline}
+}

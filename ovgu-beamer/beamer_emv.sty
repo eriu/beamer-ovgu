@@ -1,0 +1,29 @@
+% mathematische Formeln mit Serifen setzen 
+\usefonttheme[onlymath]{serif}
+
+% andere Schriftart verwenden
+% sonst gibt es eine Warnung
+\usepackage{lmodern}
+
+% This theme is nearly a black and white theme and useful for creating presentations that are easy to
+% print on a black-and-white printer. The theme uses grayscale in certain unavoidable cases, but never
+% color. It also changes the font of alerted text to bold face.
+\usecolortheme{dove}
+
+% blaue Farbe definieren
+\definecolor{ovgu_emv_blue}{rgb}{0,0.29,0.70}
+
+% Definieren der Fußzeile
+\setbeamertemplate{footline}{%
+\begin{minipage}{0.5\textwidth}%
+	% Logo der Universität
+	\vspace*{0.1cm}\hspace*{0.2cm}\includegraphics[width=2.4cm]{ovgu}\hfill
+	% Foliennummer einfügen
+	\scriptsize\insertframenumber
+	\vspace*{0.15cm}%
+\end{minipage}%
+\begin{minipage}{0.49\textwidth}%	
+	% Logo des Lehrstuhls
+	\hfill\includegraphics[width=1.36cm]{emv}\hspace*{0.1cm}%
+\end{minipage}
+}

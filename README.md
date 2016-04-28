@@ -25,7 +25,7 @@ Stil | Befehl | Screenshot
 OVGU| \usepackage{beamer_ovgu} | <img src=screenshots/ovgu.png width=378 height=284/>
 Maschinenbau|  \usepackage{beamer_mb}  | <img src=screenshots/mb.png width=378 height=284/>
 Verfahrens- und Systemtechnik|  \usepackage{beamer_vst}  | <img src=screenshots/vst.png width=378 height=284/>
-Elektrotechnik und Informationstechnik|  \usepackage{beamer_eit}`` | <img src=screenshots/eit.png width=378 height=284/>
+Elektrotechnik und Informationstechnik|  \usepackage{beamer_eit} | <img src=screenshots/eit.png width=378 height=284/>
 Informatik|  \usepackage{beamer_inf}  | <img src=screenshots/inf.png width=378 height=284/>
 Mathematik|  \usepackage{beamer_ma}  | <img src=screenshots/ma.png width=378 height=284/>
 Naturwissenschaften|  \usepackage{beamer_nat}  | <img src=screenshots/nat.png width=378 height=284/>

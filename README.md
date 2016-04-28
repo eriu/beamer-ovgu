@@ -4,48 +4,32 @@ Diese LaTex Beamer-Vorlage basiert auf der Vorlage vom [Lehrstuhl für Elektroma
 
 
 ###Verwendung:
-Für die Auswahl des passenden Designs muss die gewünschte Zeile in der Daatei ```praesentation.tex``` ausgewählt werden. Folgende Design stehen zur Auswahl:
+Für die Auswahl des passenden Designs muss die gewünschte Zeile in der Daatei ```praesentation.tex``` ausgewählt werden. Folgende Designvorlagen stehen zur Auswahl:
 
 * Stil der Otto-von-Guericke-Universität (mit Überschriften im Header)
-	```\usepackage{beamer_ovgu}```
-
 * Stil der Fakultät für Maschinenbau
-	```\usepackage{beamer_mb}```
-
 * Stil der Fakultät für Verfahrens- und Systemtechnik
-	```\usepackage{beamer_vst}```
-
 * Stil der Fakultät für Elektrotechnik und Informationstechnik
-	```\usepackage{beamer_eit}```
-
 * Stil der Fakultät für Informatik
-	```\usepackage{beamer_inf}```
-
 * Stil der Fakultät für Mathematik
-	```\usepackage{beamer_ma}```
-
 * Stil der Fakultät für Naturwissenschaften
-	```\usepackage{beamer_nat}```
-
 * Stil der Medizinische Fakultät
-	```\usepackage{beamer_med}```
-
 * Stil der Fakultät für Humanwissenschaften
-	```\usepackage{beamer_hw}```
-
 * Stil der Fakultät für Wirtschaftswissenschaften
-	```\usepackage{beamer_ww}```
+* Stil des Lehrstuhls für Elektromagnetische Verträglichkeit (EMV)
+
 	
 ###Screenshoots
-Stil | Screenshot
+Stil | Befehl | Screenshot
 :---| :---|
-OVGU| <img src=screenshots/ovgu.png width=378 height=284/>
-Maschinenbau| <img src=screenshots/mb.png width=378 height=284/>
-Verfahrens- und Systemtechnik| <img src=screenshots/vst.png width=378 height=284/>
-Elektrotechnik und Informationstechnik| <img src=screenshots/eit.png width=378 height=284/>
-Informatik| <img src=screenshots/inf.png width=378 height=284/>
-Mathematik| <img src=screenshots/ma.png width=378 height=284/>
-Naturwissenschaften| <img src=screenshots/nat.png width=378 height=284/>
-Medizin| <img src=screenshots/med.png width=378 height=284/>
-Humanwissenschaften| <img src=screenshots/hw.png width=378 height=284/>
-Wirtschaftswissenschaften| <img src=screenshots/ww.png width=378 height=284/>
+OVGU|```\usepackage{beamer_ovgu}``` | <img src=screenshots/ovgu.png width=378 height=284/>
+Maschinenbau| ```\usepackage{beamer_mb}``` |<img src=screenshots/mb.png width=378 height=284/>
+Verfahrens- und Systemtechnik| ```\usepackage{beamer_vst}``` | <img src=screenshots/vst.png width=378 height=284/>
+Elektrotechnik und Informationstechnik| ```\usepackage{beamer_eit}`` |<img src=screenshots/eit.png width=378 height=284/>
+Informatik| ```\usepackage{beamer_inf}``` |<img src=screenshots/inf.png width=378 height=284/>
+Mathematik| ```\usepackage{beamer_ma}``` |<img src=screenshots/ma.png width=378 height=284/>
+Naturwissenschaften| ```\usepackage{beamer_nat}``` |<img src=screenshots/nat.png width=378 height=284/>
+Medizin| ```\usepackage{beamer_med}``` |<img src=screenshots/med.png width=378 height=284/>
+Humanwissenschaften| ```\usepackage{beamer_hw}``` |<img src=screenshots/hw.png width=378 height=284/>
+Wirtschaftswissenschaften| ```\usepackage{beamer_ww}``` |<img src=screenshots/ww.png width=378 height=284/>
+Elektromagnetische Verträglichkeit | ```\usepackage{beamer_emv}``` |<img src=screenshots/emv.png width=378 height=284/>

@@ -1,6 +1,6 @@
 ##Beamer Vorlage für Studenten & Mitarbeiter der OVGU
 
-Diese LaTex [Beamer](https://de.wikipedia.org/wiki/Beamer_(LaTeX) -Vorlage basiert auf der Vorlage vom [Lehrstuhl für Elektromagnetische Verträglichkeit](http://www.emv.ovgu.de/Forschung+_+Lehre/Richtlinien+und+Vorlagen-media_id-1424.html) und wurde um das Design aller Fakultäten der Otto-von-Guericke-Universität Magdeburg (OVGU) erweitert. Die verwendeten Grafiken sind von der [CD Seite]( http://www.cd.ovgu.de/) entnommen.
+Diese LaTex [Beamer](https://de.wikipedia.org/wiki/Beamer_(LaTeX)) -Vorlage basiert auf der Vorlage vom [Lehrstuhl für Elektromagnetische Verträglichkeit](http://www.emv.ovgu.de/Forschung+_+Lehre/Richtlinien+und+Vorlagen-media_id-1424.html) und wurde um das Design aller Fakultäten der Otto-von-Guericke-Universität Magdeburg (OVGU) erweitert. Die verwendeten Grafiken sind von der [CD Seite]( http://www.cd.ovgu.de/) entnommen.
 
 
 ###Verwendung:
